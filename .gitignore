@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+
+# Env files (if you ever add them)
+.env
+.env.local
