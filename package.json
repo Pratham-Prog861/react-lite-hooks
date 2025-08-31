@@ -1,6 +1,6 @@
 {
   "name": "react-lite-hooks",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React Utilities",
   "keywords": [
     "npm",
@@ -14,8 +14,8 @@
   "license": "ISC",
   "author": "Pratham Darji",
   "repository": {
-    "type" : "git",
-     "url": "git+https://github.com/Pratham-Prog861/react-lite-hooks.git"
+    "type": "git",
+    "url": "git+https://github.com/Pratham-Prog861/react-lite-hooks.git"
   },
   "type": "module",
   "main": "dist/index.js",
