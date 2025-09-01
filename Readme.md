@@ -7,7 +7,7 @@ Save time by eliminating boilerplate for persistent state, clipboard utilities, 
 
 ## Features
 
-- **4 essential hooks in one package**
+- **5 essential hooks in one package**
 - **TypeScript support** out of the box
 - **Tiny, tree-shakeable** build (ESM + types)
 - **React 16.8+** (hooks API only)
