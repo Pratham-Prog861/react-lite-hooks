@@ -90,6 +90,33 @@ pnpm add react-lite-hooks
     }
 ```
 
+### 5. useToggle
+
+#### A simple hook to manage boolean state — no more repetitive setState(!state) logic
+
+```bash
+import { useToggle } from "react-lite-hooks";
+
+function ToggleExample() {
+  const [isOpen, toggleOpen, setOpen] = useToggle(false);
+
+  return (
+    <div>
+      <button onClick={toggleOpen}>
+        {isOpen ? "Close Panel" : "Open Panel"}
+      </button>
+
+      {isOpen && (
+        <div>
+          <p>Panel content here.</p>
+          <button onClick={() => setOpen(false)}>Force Close</button>
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
 ## Requirements
 
 ### React 16.8+ (hooks support)
