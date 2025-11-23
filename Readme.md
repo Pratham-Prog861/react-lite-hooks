@@ -226,6 +226,91 @@ function App() {
 }
 ```
 
+### 11. useHover
+
+#### Tracks whether an element is being hovered.
+
+```tsx
+import { useHover } from "react-lite-hooks";
+
+function HoverCard() {
+  const [hoverRef, isHovered] = useHover();
+
+  return <div ref={hoverRef}>{isHovered ? "I am hovered!" : "Hover me"}</div>;
+}
+```
+
+### 12. useInterval
+
+#### Declarative setInterval that handles the "stale closure" problem.
+
+```tsx
+import { useState } from "react";
+import { useInterval } from "react-lite-hooks";
+
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useInterval(() => {
+    setCount(count + 1);
+  }, 1000);
+
+  return <p>Count: {count}</p>;
+}
+```
+
+### 13. useKeyPress
+
+#### Detects when a specific key is pressed.
+
+```tsx
+import { useKeyPress } from "react-lite-hooks";
+
+function KeyListener() {
+  const isEnterPressed = useKeyPress("Enter");
+
+  return <p>{isEnterPressed ? "Enter is pressed!" : "Press Enter"}</p>;
+}
+```
+
+### 14. useIsFirstRender
+
+#### Returns true only on the first render of the component.
+
+```tsx
+import { useEffect } from "react";
+import { useIsFirstRender } from "react-lite-hooks";
+
+function Component() {
+  const isFirst = useIsFirstRender();
+
+  useEffect(() => {
+    if (isFirst) {
+      console.log("Component just mounted");
+    }
+  }, [isFirst]);
+
+  return <div>Check console</div>;
+}
+```
+
+### 15. useTimeout
+
+#### Declarative setTimeout.
+
+```tsx
+import { useState } from "react";
+import { useTimeout } from "react-lite-hooks";
+
+function DelayedMessage() {
+  const [show, setShow] = useState(false);
+
+  useTimeout(() => setShow(true), 2000);
+
+  return <div>{show ? "Hello after 2s!" : "Waiting..."}</div>;
+}
+```
+
 ## Requirements
 
 ### React 16.8+ (hooks support)

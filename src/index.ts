@@ -8,3 +8,8 @@ export * from "./useOnClickOutside";
 export * from "./useWindowSize";
 export * from "./usePrevious";
 export * from "./useEventListener";
+export * from "./useHover";
+export * from "./useInterval";
+export * from "./useKeyPress";
+export * from "./useIsFirstRender";
+export * from "./useTimeout";

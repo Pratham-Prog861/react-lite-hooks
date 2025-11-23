@@ -17,3 +17,8 @@ All notable changes to this project will be documented in this file.
 - `useWindowSize`: Track window dimensions
 - `usePrevious`: Access previous state value
 - `useEventListener`: Manage event listeners safely
+- `useHover`: Track element hover state
+- `useInterval`: Declarative setInterval
+- `useKeyPress`: Detect specific key presses
+- `useIsFirstRender`: Check if it's the first render
+- `useTimeout`: Declarative setTimeout
