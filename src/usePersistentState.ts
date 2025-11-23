@@ -19,7 +19,7 @@ export function usePersistentState<T>(
       storage.setItem(key, JSON.stringify(value));
       // Notify other tabs
       window.dispatchEvent(new StorageEvent("storage", { key }));
-    } catch (error) {
+    } catch (error: unknown) {
       /* Ignore quota errors */
       console.error("Error setting item", error);
     }
@@ -31,7 +31,7 @@ export function usePersistentState<T>(
         try {
           const item = storage.getItem(key);
           if (item) setValue(JSON.parse(item) as T);
-        } catch (error) {
+        } catch (error: unknown) {
           /* Ignore errors */
           console.error("Error parsing item", error);
         }
