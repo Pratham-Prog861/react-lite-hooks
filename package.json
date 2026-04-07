@@ -1,18 +1,36 @@
 {
   "name": "react-lite-hooks",
-  "version": "2.3.0",
-  "description": "React Utilities",
+  "version": "2.4.0",
+  "description": "Lightweight TypeScript React hooks for UI state, browser events, and responsive behavior",
   "keywords": [
-    "npm",
+    "react hooks",
+    "custom hooks",
+    "typescript hooks",
     "react",
     "hooks",
+    "react utilities",
+    "ui hooks",
+    "browser hooks",
+    "responsive hooks",
+    "useDebounce",
+    "useThrottle",
+    "useMediaQuery",
+    "useOnClickOutside",
     "usePersistentState",
     "useClipboard",
-    "useMediaQuery",
-    "useOnScreen"
+    "useOnScreen",
+    "useWindowSize"
   ],
   "license": "ISC",
   "author": "Pratham Darji",
+  "homepage": "https://github.com/Pratham-Prog861/react-lite-hooks#readme",
+  "bugs": {
+    "url": "https://github.com/Pratham-Prog861/react-lite-hooks/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Pratham-Prog861"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pratham-Prog861/react-lite-hooks.git"
@@ -27,6 +45,14 @@
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
     "lint": "eslint src"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -43,9 +69,5 @@
     "tslib": "^2.8.1",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.47.0"
-  },
-  "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
   }
 }

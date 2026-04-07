@@ -13,3 +13,6 @@ export * from "./useInterval";
 export * from "./useKeyPress";
 export * from "./useIsFirstRender";
 export * from "./useTimeout";
+export * from "./useThrottle";
+export * from "./useResizeObserver";
+export * from "./useNetworkStatus";

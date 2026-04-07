@@ -7,7 +7,7 @@ Save time by eliminating boilerplate for persistent state, clipboard utilities, 
 
 ## Features
 
-- **10 essential hooks in one package**
+- **18 essential hooks in one package**
 - **TypeScript support** out of the box
 - **Tiny, tree-shakeable** build (ESM + types)
 - **React 16.8+** (hooks API only)
@@ -308,6 +308,65 @@ function DelayedMessage() {
   useTimeout(() => setShow(true), 2000);
 
   return <div>{show ? "Hello after 2s!" : "Waiting..."}</div>;
+}
+```
+
+### 16. useThrottle
+
+#### Throttles rapidly changing values to update at most once per delay interval.
+
+```tsx
+import { useState } from "react";
+import { useThrottle } from "react-lite-hooks";
+
+function MouseTracker() {
+  const [x, setX] = useState(0);
+  const throttledX = useThrottle(x, 200);
+
+  return (
+    <div onMouseMove={(e) => setX(e.clientX)}>
+      Fast: {x} | Throttled: {throttledX}
+    </div>
+  );
+}
+```
+
+### 17. useResizeObserver
+
+#### Observes element size changes with ResizeObserver.
+
+```tsx
+import { useResizeObserver } from "react-lite-hooks";
+
+function ResizableCard() {
+  const [ref, size] = useResizeObserver<HTMLDivElement>();
+
+  return (
+    <div
+      ref={ref}
+      style={{ resize: "both", overflow: "auto", border: "1px solid #ccc" }}
+    >
+      Width: {Math.round(size.width)} | Height: {Math.round(size.height)}
+    </div>
+  );
+}
+```
+
+### 18. useNetworkStatus
+
+#### Tracks browser online/offline state.
+
+```tsx
+import { useNetworkStatus } from "react-lite-hooks";
+
+function NetworkBanner() {
+  const isOnline = useNetworkStatus();
+
+  return (
+    <p style={{ color: isOnline ? "green" : "red" }}>
+      {isOnline ? "You are online" : "You are offline"}
+    </p>
+  );
 }
 ```
 
